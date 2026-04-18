@@ -3,21 +3,26 @@
 <head>
     <title>Guest Book</title>
     <link rel="stylesheet" href="style.css">
+    <script src="guest-book.js"></script>
 </head>
 <body>
 <header>
     <h1><a href="/">&lt;&lt;&nbsp;</a>Guest Book</h1>
 </header>
 <main>
-    <form action="/guest-book" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    <section>
+        <form action="/guest-book" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">Submit</button>
-    </form>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="10" cols="40" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="comments-section"></section>
 </main>
 </body>
 </html>
