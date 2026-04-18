@@ -4,7 +4,11 @@ import org.springframework.stereotype.Service
 
 @Service
 class CommentService {
-    private val comments: Array<Comment> = arrayOf()
+    private var comments: MutableList<Comment> = mutableListOf()
 
-    fun getComments() = comments
+    fun getComments(): List<Comment> = comments
+    
+    fun saveComment(author: String, comment: String) {
+        comments.add(Comment(comments.size, author, comment))
+    }
 }
