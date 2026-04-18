@@ -1,5 +1,6 @@
 package com.controllers
 
+import com.services.Comment
 import com.services.CommentService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
@@ -10,7 +11,7 @@ class GuestBookController (
 ){
 
     @GetMapping("/comments")
-    fun getComments(): Array<out Map<String, Any>> {
+    fun getComments(): Array<Comment> {
         return commentService.getComments()
     }
 }
