@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class GuestBookController {
-    @GetMapping("/comments", produces = ["application/json"])
+    @GetMapping("/comments")
     fun getComments() = """
         [
             {

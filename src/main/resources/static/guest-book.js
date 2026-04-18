@@ -44,8 +44,6 @@ const renderComments = (comments, commentsContainer) => {
 const main = async () => {
     const comments = await fetchComments();
     const commentsContainer = document.getElementById('comments-section');
-    console.log(commentsContainer);
-    console.log(comments);
     renderComments(comments, commentsContainer);
 }
 
